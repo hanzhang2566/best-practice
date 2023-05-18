@@ -27,13 +27,13 @@ public class ExceptionAdvice {
     }
 
     /**
-     * {@link AppException} 错误处理
+     * {@link AppNonRuntimeException} 错误处理
      *
      * @param e e
      * @return ResponseEntity
      */
-    @ExceptionHandler(value = AppException.class)
-    public ResponseEntity<R> appException(AppException e) {
+    @ExceptionHandler(value = AppNonRuntimeException.class)
+    public ResponseEntity<R> appException(AppNonRuntimeException e) {
         e.printStackTrace();
         R error = R.error(e.getErrorCode());
         return new ResponseEntity<>(error, HttpStatus.OK);
