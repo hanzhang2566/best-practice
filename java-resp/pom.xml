@@ -6,7 +6,7 @@
     <artifactId>resp</artifactId>
     <version>1.0.0</version>
     <name>java-resp</name>
-    <description></description>
+    <description>Backend Response in Restful Style</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

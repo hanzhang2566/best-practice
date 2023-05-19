@@ -1,10 +1,12 @@
-package resp.error;
+package resp.common;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import resp.common.R;
+import resp.error.AppNonRuntimeException;
+import resp.error.AppRuntimeException;
+import resp.error.HttpStatusException;
 
 /**
  * Usage: 全局异常处理类 <br/>

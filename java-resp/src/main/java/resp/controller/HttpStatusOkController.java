@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import resp.common.R;
 
 /**
- * Usage:  <br/>
+ * Usage: 演示 http 正确状态码 <br/>
  * Date: 2023/5/18 17:31 <br/>
  *
  * @author <a href="mailto:hanzhang2566@foxmail.com">hanzhang</a>

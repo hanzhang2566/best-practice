@@ -2,7 +2,6 @@ package resp.error;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
-import resp.common.ErrorCode;
 
 /**
  * Usage: http 异常状态码 <br/>
