@@ -4,13 +4,18 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.jeanut</groupId>
     <artifactId>resp</artifactId>
-    <version>1.0.0</version>
+    <version>${revision}${changelist}</version>
     <name>java-resp</name>
     <description>Backend Response in Restful Style</description>
     <properties>
         <java.version>1.8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <revision>alpha</revision>
+        <changelist>-0.1.0</changelist>
+
         <spring-boot.version>2.7.6</spring-boot.version>
         <org.projectlombok.version>1.18.16</org.projectlombok.version>
     </properties>
