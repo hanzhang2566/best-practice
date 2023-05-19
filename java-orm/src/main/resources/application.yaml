@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: orm
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/gorm?serverTimezone=Asia/Shanghai
+      username: root
+      password: mysql@666
+  flyway:
+    locations: db/migration
+
+server:
+  port: 8080
