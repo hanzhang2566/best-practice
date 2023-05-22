@@ -4,10 +4,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import resp.resp.R;
 import resp.error.AppNonRuntimeException;
 import resp.error.AppRuntimeException;
-import resp.error.HttpStatusException;
+import resp.resp.R;
 
 /**
  * Usage: 全局异常处理类 <br/>
@@ -17,18 +16,6 @@ import resp.error.HttpStatusException;
  */
 @RestControllerAdvice
 public class ExceptionAdvice {
-    /**
-     * {@link HttpStatusException} 错误处理
-     *
-     * @param e e
-     * @return ResponseEntity
-     */
-    @ExceptionHandler(value = HttpStatusException.class)
-    public ResponseEntity<R> httpStatusException(HttpStatusException e) {
-        e.printStackTrace();
-        return new ResponseEntity<>(e.getHttpStatus());
-    }
-
     /**
      * {@link AppNonRuntimeException} 错误处理
      *
