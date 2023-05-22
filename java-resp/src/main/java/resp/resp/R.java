@@ -1,10 +1,11 @@
-package resp.common;
+package resp.resp;
 
 import org.springframework.http.HttpStatus;
+import resp.enums.ErrorCode;
 
 import java.util.HashMap;
 
-import static resp.common.ErrorCode.OK;
+import static resp.enums.ErrorCode.OK;
 
 
 /**

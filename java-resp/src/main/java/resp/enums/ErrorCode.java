@@ -1,17 +1,24 @@
-package resp.common;
+package resp.enums;
 
 import lombok.Getter;
 
 /**
- * Usage: 错误码 <br/>
+ * Usage: 错误码 TODO 需要服务统一状态码 <br/>
  * Date: 2023/5/18 14:18 <br/>
  *
  * @author <a href="mailto:hanzhang2566@foxmail.com">hanzhang</a>
  */
 public enum ErrorCode {
+    //<editor-fold desc="通用状态码">
+    /**
+     * 后端处理成功
+     */
+    OK(0, "ok"),
 
-    //<editor-fold desc="http 状态码">
-    OK(200, "OK"),
+    /**
+     * 后端出现未定义的服务器内部错误
+     */
+    FAILED(-1, "failed"),
     //</editor-fold>
 
 

@@ -1,7 +1,7 @@
 package resp.error;
 
 import lombok.Getter;
-import resp.common.ErrorCode;
+import resp.enums.ErrorCode;
 
 /**
  * Usage: 非运行时异常 <br/>

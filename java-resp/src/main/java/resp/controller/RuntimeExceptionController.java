@@ -5,8 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import resp.common.ErrorCode;
-import resp.common.R;
+import resp.enums.ErrorCode;
+import resp.resp.R;
 import resp.error.AppRuntimeException;
 
 /**

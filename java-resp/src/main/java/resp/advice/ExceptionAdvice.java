@@ -1,9 +1,10 @@
-package resp.common;
+package resp.advice;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import resp.resp.R;
 import resp.error.AppNonRuntimeException;
 import resp.error.AppRuntimeException;
 import resp.error.HttpStatusException;
