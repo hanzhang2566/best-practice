@@ -1,12 +1,12 @@
-package resp.controller;
+package boot.api.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import resp.enums.ErrorCode;
-import resp.resp.R;
-import resp.error.AppNonRuntimeException;
+import boot.enums.ErrorCode;
+import boot.api.R;
+import boot.exception.AppNonRuntimeException;
 
 /**
  * Usage: 非运行时异常 <br/>

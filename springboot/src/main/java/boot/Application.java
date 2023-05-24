@@ -1,4 +1,4 @@
-package resp;
+package boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,10 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author <a href="mailto:hanzhang2566@foxmail.com">hanzhang</a>
  */
 @SpringBootApplication
-public class RespApplication {
-
+public class Application {
     public static void main(String[] args) {
-        SpringApplication.run(RespApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }

@@ -1,19 +1,19 @@
-package resp.error;
+package boot.exception;
 
 import lombok.Getter;
-import resp.enums.ErrorCode;
+import boot.enums.ErrorCode;
 
 /**
- * Usage: 运行时异常 <br/>
+ * Usage: 非运行时异常 <br/>
  * Date: 2023/5/18 15:03 <br/>
  *
  * @author <a href="mailto:hanzhang2566@foxmail.com">hanzhang</a>
  */
-public class AppRuntimeException extends RuntimeException {
+public class AppNonRuntimeException extends Exception {
     @Getter
     private final ErrorCode errorCode;
 
-    public AppRuntimeException(ErrorCode errorCode) {
+    public AppNonRuntimeException(ErrorCode errorCode) {
         this.errorCode = errorCode;
     }
 }

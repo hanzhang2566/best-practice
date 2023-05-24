@@ -104,7 +104,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>resp.RespApplication</mainClass>
+                    <mainClass>boot.Application</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>

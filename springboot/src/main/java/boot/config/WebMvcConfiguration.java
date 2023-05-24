@@ -1,12 +1,12 @@
-package resp.config;
+package boot.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 import org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor;
-import resp.handler.mvc.MyHandlerMethodReturnValueHandler;
-import resp.resp.R;
+import boot.api.handler.MyHandlerMethodReturnValueHandler;
+import boot.api.R;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;

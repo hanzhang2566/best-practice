@@ -1,10 +1,10 @@
-package resp.controller;
+package boot.api.controller;
 
 import lombok.Data;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import resp.resp.R;
+import boot.api.R;
 
 /**
  * Usage: 演示 http 正确状态码 <br/>

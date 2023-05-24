@@ -1,11 +1,11 @@
-package resp.resp;
+package boot.api;
 
 import org.springframework.http.HttpStatus;
-import resp.enums.ErrorCode;
+import boot.enums.ErrorCode;
 
 import java.util.HashMap;
 
-import static resp.enums.ErrorCode.OK;
+import static boot.enums.ErrorCode.OK;
 
 
 /**
