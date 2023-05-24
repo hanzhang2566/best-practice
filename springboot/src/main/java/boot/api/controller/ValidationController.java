@@ -1,11 +1,12 @@
 package boot.api.controller;
 
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import boot.api.rest.group.EmailGroup;
+import boot.api.rest.group.LoginGroup;
 import boot.api.rest.req.UserReq;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.constraints.NotEmpty;
 
 /**
  * Usage: 参数验证控制器 <br/>
@@ -17,21 +18,23 @@ import boot.api.rest.req.UserReq;
 @RequestMapping("/validation")
 @Validated
 public class ValidationController {
-    /**
-     * @return
-     */
-    @GetMapping("/obj_notnull")
-    public boolean notnull(@RequestBody String username) {
-        return true;
+    @GetMapping("/param_notnull")
+    public String notnull(@RequestParam("username") @NotEmpty String username) {
+        return username;
     }
 
-    /**
-     * @return
-     */
-    @GetMapping("/pojo_notnull")
-    public boolean notnull(@RequestBody @Validated UserReq req) {
-        return true;
+    @PostMapping("/pojo")
+    public UserReq notnull(@RequestBody @Validated UserReq req) {
+        return req;
     }
 
+    @PostMapping("/pojo_email")
+    public UserReq email(@RequestBody @Validated(value = {EmailGroup.class}) UserReq req) {
+        return req;
+    }
 
+    @PostMapping("/pojo_login")
+    public UserReq login(@RequestBody @Validated(value = {LoginGroup.class}) UserReq req) {
+        return req;
+    }
 }
