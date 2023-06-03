@@ -17,6 +17,9 @@ public enum ErrorCode {
 
     //<editor-fold desc="通用错误">
     REQUEST_BODY_IS_MISSING(100001, "request body is missing"),
+    TOKEN_IS_MISSING(100002, "token is missing"),
+    ROLE_IS_MISSING(100003, "role is missing"),
+    ROLE_IS_NOT_MATCH(100004, "role is not match"),
     //</editor-fold>
 
 
