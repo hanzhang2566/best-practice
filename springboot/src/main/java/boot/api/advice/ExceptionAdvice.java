@@ -1,5 +1,9 @@
 package boot.api.advice;
 
+import boot.api.R;
+import boot.enums.ErrorCode;
+import boot.exception.AppNonRuntimeException;
+import boot.exception.AppRuntimeException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -8,10 +12,6 @@ import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import boot.enums.ErrorCode;
-import boot.exception.AppNonRuntimeException;
-import boot.exception.AppRuntimeException;
-import boot.api.R;
 
 import java.util.stream.Collectors;
 
@@ -31,8 +31,8 @@ public class ExceptionAdvice {
      */
     @ExceptionHandler(value = AppNonRuntimeException.class)
     public ResponseEntity<R> onAppNonRuntimeException(AppNonRuntimeException e) {
-        R error = R.error(e.getErrorCode());
-        return new ResponseEntity<>(error, HttpStatus.OK);
+        R fail = R.fail(e.getErrorCode());
+        return new ResponseEntity<>(fail, HttpStatus.OK);
     }
 
     /**
@@ -43,8 +43,8 @@ public class ExceptionAdvice {
      */
     @ExceptionHandler(value = AppRuntimeException.class)
     public ResponseEntity<R> onAppRuntimeException(AppRuntimeException e) {
-        R error = R.error(e.getErrorCode());
-        return new ResponseEntity<>(error, HttpStatus.OK);
+        R fail = R.fail(e.getErrorCode());
+        return new ResponseEntity<>(fail, HttpStatus.OK);
     }
 
     /**
@@ -55,8 +55,8 @@ public class ExceptionAdvice {
      */
     @ExceptionHandler(value = Exception.class)
     public ResponseEntity<R> onException(Exception e) {
-        R error = R.error(e.getMessage());
-        return new ResponseEntity<>(error, HttpStatus.OK);
+        R fail = R.fail(e.getMessage());
+        return new ResponseEntity<>(fail, HttpStatus.OK);
     }
 
     /**
@@ -66,7 +66,7 @@ public class ExceptionAdvice {
      */
     @ExceptionHandler(value = HttpRequestMethodNotSupportedException.class)
     public ResponseEntity<R> onHttpRequestMethodNotSupportedException() {
-        return new ResponseEntity<>(R.error(ErrorCode.METHOD_NOT_ALLOWED), HttpStatus.OK);
+        return new ResponseEntity<>(R.fail(ErrorCode.METHOD_NOT_ALLOWED), HttpStatus.OK);
     }
 
     /**
@@ -89,7 +89,7 @@ public class ExceptionAdvice {
                 return objectName + ":" + defaultMessage;
             }
         }).collect(Collectors.joining(";"));
-        return new ResponseEntity<>(R.error(message), HttpStatus.OK);
+        return new ResponseEntity<>(R.fail(message), HttpStatus.OK);
     }
 
     /**
@@ -99,6 +99,6 @@ public class ExceptionAdvice {
      */
     @ExceptionHandler(value = HttpMessageNotReadableException.class)
     public ResponseEntity<R> onHttpMessageNotReadableException() {
-        return new ResponseEntity<>(R.error(ErrorCode.REQUEST_BODY_IS_MISSING), HttpStatus.OK);
+        return new ResponseEntity<>(R.fail(ErrorCode.REQUEST_BODY_IS_MISSING), HttpStatus.OK);
     }
 }

@@ -38,12 +38,12 @@ public class R extends HashMap<String, Object> {
     }
 
     /**
-     * 使用 message 创建一个错误的 R 对象，用来返回服务中定义的内部错误
+     * 使用 errorCode 创建一个错误的 R 对象，用来返回服务中定义的内部错误
      *
      * @param errorCode errorCode
      * @return this
      */
-    public static R error(ErrorCode errorCode) {
+    public static R fail(ErrorCode errorCode) {
         return new R(errorCode);
     }
 
@@ -63,7 +63,7 @@ public class R extends HashMap<String, Object> {
      * @param message 错误消息
      * @return this
      */
-    public static R error(String message) {
+    public static R fail(String message) {
         return new R(message);
     }
 }
