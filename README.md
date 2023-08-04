@@ -41,3 +41,4 @@ RespMsg[extract Resp Msg]
     RespMsg --> Stop
 ```
 
+## Bean Validation
